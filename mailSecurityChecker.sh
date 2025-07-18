@@ -26,6 +26,16 @@ print_logo() {
 RESULTS_DIR="./Results"
 mkdir -p "$RESULTS_DIR"
 
+if [[ "$EUID" -ne 0 ]]; then
+    echo "[-] Error: This script must be run as root. Please run with sudo or as root user."
+    exit 1
+fi
+
+if ! command -v spfquery >/dev/null 2>&1; then
+    echo "[-] Error: spfquery is not installed. Please install spfquery to continue."
+    exit 1
+fi
+
 # Function to perform SPF lookup, check for SPFBreak, check validity of included IPs and verify does not exceed max recursion
 check_spf() {
     local domain="$1"
