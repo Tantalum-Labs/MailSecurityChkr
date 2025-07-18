@@ -21,7 +21,6 @@ This is a bash script that automates numberous mail record, mail configuration a
    sudo apt install figlet spfquery -y
    git clone https://github.com/Tantalum-Labs/MailSecurityChkr
    ```
----
 
 ## Use
 
