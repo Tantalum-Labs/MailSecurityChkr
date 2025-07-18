@@ -10,6 +10,7 @@ This is a bash script that automates numberous mail record, mail configuration a
 - ANSI color coded report
 - Tests SPF, DKIM, DMARC, TLSA, MTA-STS record existance
 - Validates policies, recursion, syntax, best practices
+- Tests one or more domains from supplied text file, generating individual report for each
 
 ---
 
