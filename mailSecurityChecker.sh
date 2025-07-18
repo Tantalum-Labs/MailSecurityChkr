@@ -36,6 +36,11 @@ if ! command -v spfquery >/dev/null 2>&1; then
     exit 1
 fi
 
+if ! command -v figlet >/dev/null 2>&1; then
+    echo "[-] Error: figlet is not installed. Please install figlet to continue."
+    exit 1
+fi
+
 # Function to perform SPF lookup, check for SPFBreak, check validity of included IPs and verify does not exceed max recursion
 check_spf() {
     local domain="$1"
